@@ -26,4 +26,10 @@ Nad jakim klockiem le¿y klocek d?
 Jaki klocek le¿y nad klockiem a?
 
 ?-nad(X, a).
+
+Czy klocek C le¿y nad jakimœ klockiem?
+
+?-nad(c,_).
+
+Czy klo
 */
