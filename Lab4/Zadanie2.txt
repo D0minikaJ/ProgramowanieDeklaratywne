@@ -1,0 +1,6 @@
+p(a, d).
+p(X, Y):-q(X, Z), v(Z, Y).
+q(a, b).
+q(c, a).
+v(a, d).
+v(b, c).
