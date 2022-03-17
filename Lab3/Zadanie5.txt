@@ -1,0 +1,31 @@
+/*
+?-fun(a, X, f(Y))=fun(V, h(Y, V),f(g(V)). 
+////////////////////////////////
+
+fu(a, X, f(g(Y)))
+fu(V, h(Z, V), f(V))
+
+V=a
+
+fu(a, h(Y, a), f(g(a))
+
+X = h(Z, a)
+
+fu(a, h(Z, a), f(g(Y)))
+g(Y) != a
+
+nie da sie uzgodnic
+
+fu(a, X, f(g(Y)))
+fu(Y, f(Z), f(Z))
+
+Y=a
+
+fu(a, X, f(g(a)))
+fu(a, f(Z), f(Z))
+
+Z = g(a)
+fu(a, f(g(a)), f(g(a)))
+fu(a, f(g(a)), f(g(a)))
+da sie uzgodnic
+*/
