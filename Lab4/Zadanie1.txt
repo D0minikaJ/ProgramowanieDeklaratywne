@@ -1,0 +1,22 @@
+ojciec(karol, jan).
+ojciec(karol, adam).
+dziecko(tomasz, jan).
+dziecko(piotr, adam).
+dziadek(karol, marek).
+dziadek(X, Y) :- ojciec(X, Z), dziecko(Y, Z).
+/*
+?-dziadek(X, piotr).
+rys1
+*/
+
+p(a, d).
+p(X, Y):-q(X, Z), v(Z, Y).
+q(a, b).
+q(c, a).
+v(a, d).
+v(b, c).
+
+/*
+?-p(X, d).
+rys2, 3
+*/
