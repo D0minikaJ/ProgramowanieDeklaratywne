@@ -1,0 +1,15 @@
+% na(x, y)
+% opis: spełniony, gdy klocek x leży
+% klockami Y i Z
+% -----------------------------------------------na/2
+	na(c, a),
+	na(c, b),
+	na(d, c),
+	pod(X, Y):-na(Y, Z),
+	między(X, Y, Z):- na(Z, X), na(X, Y),
+	między(X, Y, Z):- na(Y, X), na(X, Z).
+%------------------------------------------------na/2
+/*
+? - między(c, X, Y).
+? - między(a, _, _).
+*/
