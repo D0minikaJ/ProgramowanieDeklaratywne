@@ -6,6 +6,27 @@ maria i borys sa rodzicami ani
 
 przodek
 
-rodzic(X, Y) :- spelniony gdy X jest przodkiem Y
+rodzic(X, Y) :- spelniony gdy X jest rodzicem Y
 prodek(X, Y) :- spelniony gfy X jest przodkiem Y
+*/
+
+rodzic(ania, jacek).
+rodzic(jan, jacek).
+rodzic(ania, basia).
+rodzic(jan, basia).
+rodzic(maria, ania).
+rodzic(borys, ania).
+
+przodek(X, Y) :- rodzic(X, Y).
+przodek(X, Y) :- rodzic(X, Z), przodek(Z, Y).
+
+/*
+czy stefan jest przodkiem jacka
+? - przodek(stefan, jacek).
+
+kto jest przodkiem basi
+?-przodek(X, basia).
+
+czyim przodkiem jest borys?
+?-przodek(borys, X).
 */
