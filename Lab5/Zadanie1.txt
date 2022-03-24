@@ -1,0 +1,11 @@
+/*
+Ania i jan są rodzicami Jacka
+Ania i jan sa rodzicami basi
+stefan jest rodzicem jana
+maria i borys sa rodzicami ani
+
+przodek
+
+rodzic(X, Y) :- spelniony gdy X jest przodkiem Y
+prodek(X, Y) :- spelniony gfy X jest przodkiem Y
+*/
