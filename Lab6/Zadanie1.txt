@@ -1,1 +1,16 @@
+Uzgodnienie list
 
+[X] [T]		[a, f(b), c, d]
+x=a; T=[f(b), c, d]
+
+[a, b] [X, Y | T]
+X=a; Y=b; T=[]
+
+[b]		[X, Y| T]
+Te listy nie daja sie ze uzgodnic, bo pierwsza lista nie posiada drugiego elementu
+
+[a, [b, a]] [X | T]
+X=a T[[b, c]]
+
+[X, Y | T]		[a, [b, c]]
+X=a Y=[b, c] T=[]
