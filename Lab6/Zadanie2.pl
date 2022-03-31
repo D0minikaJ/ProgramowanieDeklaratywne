@@ -1,45 +1,38 @@
-/*
-Rozpoznawanie wielomianow jednej zmiennej o wspolczynnikach liczbowych
+% kwadrat_listy(+L1, ?L2).
+% spelniony, gdy elementy listy L2 sa kwadratami
+% elementow listy L1; Lista L1 jest lista liczbowa
+%ograniczeniea: L1 i L2 sa listami liczbowymi.
+%---------------------------------------------------------------------
 
-1) X jest wielomianem zmiennej X
-   C - liczba jest wielomianem zmiennej
-2) jezeli W, W1, W2 sa wielomianem zmiennej X to
-     -W, W1+W2, W-1,W2, W1*W2, W^N (N-liczba naturalna)
-     sa wielomianami zmiennej X
+%warunek konczacy rekurencje: kwadrat listy pustej
+%jest lista pusta.
 
-wielomian (W, X)
-spelniony gdy w jest wielomianem zmiennej X o wspolczynnikach liczbowych
+kwadrat_listy([], []).
 
-definicja rekurancyjna
+% rekurencja:
 
- warunki zakonczenia rekurencji
-	wielomian (X, X).
-	wielomian (C, _):-number(C).
+kwadrat_listy([H1 | T1], [H2 | T2]):-
+	H2 is H1=1.
+	kwadrat_listy(T1, T2).
 
-rekurencja
+%podwojenie(+L1, ?L2).
+%spelniony, gdy elementy listy L2 sa podwojonym
+%elementami listy L1, np. L1=[a, b], L2=[a, a, b, b]
+%------------------------------------------------------------------
 
-*/
+%warunek konczacy rekurencje: podwojenie listy pustej
+%jest lista pusta.
 
-wielomian(-W, X):-wielomian(W, X).
-wielomian(W1+W2, X):-wielomian(W1, X), wielomian(W2, X).
-wielomian(W1-W2, X):-wielomian (W1, X), wielomian (W2, X).
-wielomian(W1*W2, X):-wielomian (W1, X), wielomian (W2, X).
-wielomian(W^N), X:-integer(N), N>1, wielomian(W, X).
+%Zadania
+%Podwojeniem listy 1 i 2 jest lista ktora sklada sie z 1 i 4
 
-/*
-Czy Y jest wielomianem zmiennej Y?
-?-wielomian(y, y).
+%?-kwadrat_listy([1, 2], [1,4]).
+%true
 
-Czy 3 jest wielomianem zmiennej x?
-?-wielomian(3, x).
+%Lista jest kwadratem listy ktora sie z 2 i 4
+%?-kwadrat_listy([2, 4], X).
+%X=[4, 16]
 
-Czy 2x+1 jest wielomianem zmiennej x?
-?-wielomian(2*x+1, x)
+%?-kwadrat_listy(X, [4, 25]).
+%program nie dziala
 
-Czy 3*x^2 jest wielomianem zmiennej x?
-?-wielomian(3*x^2, x).
-
-Czy x^-3 jest wielomianem zmiennej x?
-?-wielomian(x^(-3), x).
-
-*/
