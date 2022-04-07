@@ -27,4 +27,10 @@ odwrotna_lista([H|T1], L):-odwrotna_lista(T1, T2), konkat(T2, [H], L).
 /*
 Czy odwrocnie 123 bedzie 321
 ?-odwrotna_lista([1,2,3],[3,2,1]).
+
+Co jest odwrotnoscia abc?
+?-odwrotna_lista([a,b,c],X).
+
+jaka lista jest odwrotna do pustej listy?
+?-odwrotna_lista([], X).
 */
