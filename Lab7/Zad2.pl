@@ -102,6 +102,7 @@ Kolo
 lista - 2 zad
 definicja rekurencyjna - 1zad
 prosty program - 1zad
+drzewo poszukiwań
 */
 
 
