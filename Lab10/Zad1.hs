@@ -6,8 +6,18 @@ compare a b
  |otherwise =LT
 
 {--
-^Zadefiniuj funkcje jednoargumentowa sprawdz(x) o wartosci typu String, ktora dla X ujemnych podaje w wyniku napis "liczba mniejsza od 0" dla xe<0;10> - "liczba z przedzialu od 0 do 10"
-dla x>10 - "liczba wieksza od 10". Uzyj definicji warunkowej ze straznikami staraj sie zastosowac mozeliwie najmniejsza liczbe wynikow.
+^Zadefiniuj funkcje jednoargumentowa sprawdz(x) o wartosci typu String, ktora dla X 
+
+ujemnych podaje w wyniku napis "liczba mniejsza od 0" dla xe<0;10> - "liczba z 
+
+przedzialu od 0 do 10"
+dla x>10 - "liczba wieksza od 10". Uzyj definicji warunkowej ze straznikami staraj 
+
+sie zastosowac mozeliwie najmniejsza liczbe wynikow.
+
+" " - [[Char]]
+' ' - [Char]
+
 --}
 
 sprawdz::Integer -> String
